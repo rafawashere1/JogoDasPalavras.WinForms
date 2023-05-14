@@ -233,7 +233,7 @@
             _currentMaskedTextBoxIndex = 0;
             _currentAttempt = 1;
             _initialIndex1 = 0;
-            _initialIndex2 += 0;
+            _initialIndex2 = 0;
 
             foreach (MaskedTextBox mtb in _mtbList)
             {
