@@ -1,4 +1,7 @@
-﻿namespace JogoDasPalavras.WinApp
+﻿using JogoDasPalavras.WinApp.Compartilhado;
+using System.Globalization;
+
+namespace JogoDasPalavras.WinApp
 {
     public partial class WordleForm : Form
     {
@@ -161,24 +164,25 @@
                 }
             }
         }
-
         private void ValidateGuess(object sender, EventArgs e)
         {
             _wordle.guess = GetGuessFromMtbList();
+
+            string normalizedGuess = _wordle.guess.RemoveDiacritics();
+            string normalizedSecretWord = _wordle.secretWord.RemoveDiacritics();
 
             if (_wordle.IsValidWord())
             {
                 _currentAttempt = 1;
                 _currentMaskedTextBoxIndex -= 1;
-                
 
-                for (int i = 0; i < _wordle.secretWord.Length; i++)
+                for (int i = 0; i < normalizedSecretWord.Length; i++)
                 {
-                    if (_wordle.guess[i].ToString().ToLower() == _wordle.secretWord[i].ToString())
+                    if (normalizedGuess[i].ToString().ToLower() == normalizedSecretWord[i].ToString().ToLower())
                     {
                         _mtbList[_initialIndex1].BackColor = Color.Green;
                     }
-                    else if (_wordle.secretWord.Contains(_wordle.guess[i].ToString().ToLower()))
+                    else if (normalizedSecretWord.Contains(normalizedGuess[i].ToString().ToLower()))
                     {
                         _mtbList[_initialIndex1].BackColor = Color.Yellow;
                     }
@@ -189,14 +193,15 @@
                     _initialIndex1++;
                 }
 
-                if (_wordle.guess.ToLower() == _wordle.secretWord)
+                if (normalizedGuess.ToLower() == normalizedSecretWord.ToLower())
                 {
                     MessageBox.Show("Parabéns, você acertou a palavra secreta!");
                     ResetGame();
                 }
                 else if (_currentMaskedTextBoxIndex == _mtbList.Count - 1)
                 {
-                    MessageBox.Show("Você não acertou a palavra secreta, tente novamente!");
+                    TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+                    MessageBox.Show($"Você errou! :(\n\n A palavra era: {_wordle.secretWord.FirstLetterToUpperCase()}.");
                     ResetGame();
                 }
                 else
@@ -207,10 +212,6 @@
 
                 EnableButtons();
             }
-
-            else
-                MessageBox.Show("Palavra Incompleta, tente novamente!");
-
         }
 
         private string GetGuessFromMtbList()
@@ -240,7 +241,7 @@
                 mtb.Clear();
                 mtb.BackColor = Color.White;
             }
-                
+
             _mtbList[_currentMaskedTextBoxIndex].Focus();
         }
     }

@@ -859,7 +859,7 @@
             Font = new Font("MV Boli", 9F, FontStyle.Bold, GraphicsUnit.Point);
             MinimumSize = new Size(930, 671);
             Name = "WordleForm";
-            Text = "Form1";
+            Text = "Academia do Wordle";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
