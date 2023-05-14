@@ -1,4 +1,4 @@
-﻿namespace JogoDasPalavras.WinApp.Compartilhado
+﻿namespace JogoDasPalavras.WinApp.Shared
 {
     public static class Utils
     {

@@ -1,4 +1,4 @@
-﻿using JogoDasPalavras.WinApp.Compartilhado;
+﻿using JogoDasPalavras.WinApp.Shared;
 using System.Globalization;
 
 namespace JogoDasPalavras.WinApp
