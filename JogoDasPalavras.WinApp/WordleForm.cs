@@ -212,6 +212,22 @@ namespace JogoDasPalavras.WinApp
 
                 EnableButtons();
             }
+
+            else
+            {
+                MessageBox.Show("Palavra inválida!");
+
+                _initialIndex2 -= 5;
+
+                int NumberOfLetters = _wordle.guess.Length;
+
+                for (int i = NumberOfLetters - 1; i >= 0; i--)
+                {
+                    _currentAttempt--;
+                    _currentMaskedTextBoxIndex--;
+                }
+            }
+                
         }
 
         private string GetGuessFromMtbList()
