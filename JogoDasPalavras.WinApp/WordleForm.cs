@@ -1,5 +1,4 @@
 ﻿using JogoDasPalavras.WinApp.Shared;
-using System.Globalization;
 
 namespace JogoDasPalavras.WinApp
 {
@@ -73,7 +72,6 @@ namespace JogoDasPalavras.WinApp
 
                 else b.Click += GetGuess;
             }
-
         }
 
         private void GetGuess(object sender, EventArgs e)
@@ -113,6 +111,102 @@ namespace JogoDasPalavras.WinApp
                     break;
                 }
             }
+        }
+
+        private void ValidateGuess(object sender, EventArgs e)
+        {
+            _wordle.guess = GetGuessFromMtbList();
+
+            string normalizedGuess = _wordle.guess.RemoveDiacritics();
+            string normalizedSecretWord = _wordle.secretWord.RemoveDiacritics();
+
+            if (_wordle.IsValidWord())
+            {
+                _currentAttempt = 1;
+                _currentMaskedTextBoxIndex -= 1;
+
+                for (int i = 0; i < normalizedSecretWord.Length; i++)
+                {
+                    if (normalizedGuess[i].ToString().ToLower() == normalizedSecretWord[i].ToString().ToLower())
+                    {
+                        _mtbList[_initialIndex1].BackColor = Color.Green;
+                    }
+                    else if (normalizedSecretWord.Contains(normalizedGuess[i].ToString().ToLower()))
+                    {
+                        _mtbList[_initialIndex1].BackColor = Color.Yellow;
+                    }
+                    else
+                    {
+                        _mtbList[_initialIndex1].BackColor = Color.Gray;
+                    }
+                    _initialIndex1++;
+                }
+
+                if (normalizedGuess.ToLower() == normalizedSecretWord.ToLower())
+                {
+                    MessageBox.Show("Parabéns, você acertou a palavra secreta!");
+                    ResetGame();
+                }
+                else if (_currentMaskedTextBoxIndex == _mtbList.Count - 1)
+                {
+                    MessageBox.Show($"Você errou! :(\n\n A palavra era: {_wordle.secretWord.FirstLetterToUpperCase()}.");
+                    ResetGame();
+                }
+                else
+                {
+                    _currentMaskedTextBoxIndex++;
+                    _mtbList[_currentMaskedTextBoxIndex].Focus();
+                }
+
+                EnableButtons();
+            }
+
+            else
+            {
+                MessageBox.Show("Palavra inválida!");
+
+                _initialIndex2 -= 5;
+
+                int NumberOfLetters = _wordle.guess.Length;
+
+                for (int i = NumberOfLetters - 1; i >= 0; i--)
+                {
+                    _currentAttempt--;
+                    _currentMaskedTextBoxIndex--;
+                }
+            }
+
+        }
+
+        private string GetGuessFromMtbList()
+        {
+            string guess = "";
+
+            for (int i = _initialIndex2; i < _mtbList.Count; i++)
+            {
+                guess += _mtbList[i].Text;
+            }
+
+            _initialIndex2 += 5;
+
+            return guess;
+        }
+
+        private void ResetGame()
+        {
+            _wordle = new Wordle();
+            _currentMaskedTextBoxIndex = 0;
+            _currentAttempt = 1;
+            _initialIndex1 = 0;
+            _initialIndex2 = 0;
+
+            foreach (MaskedTextBox mtb in _mtbList)
+            {
+                mtb.Clear();
+                mtb.BackColor = Color.Gainsboro;
+            }
+
+            _mtbList[_currentMaskedTextBoxIndex].Focus();
         }
 
         private void DisableButtons()
@@ -163,102 +257,6 @@ namespace JogoDasPalavras.WinApp
                     control.Enabled = true;
                 }
             }
-        }
-        private void ValidateGuess(object sender, EventArgs e)
-        {
-            _wordle.guess = GetGuessFromMtbList();
-
-            string normalizedGuess = _wordle.guess.RemoveDiacritics();
-            string normalizedSecretWord = _wordle.secretWord.RemoveDiacritics();
-
-            if (_wordle.IsValidWord())
-            {
-                _currentAttempt = 1;
-                _currentMaskedTextBoxIndex -= 1;
-
-                for (int i = 0; i < normalizedSecretWord.Length; i++)
-                {
-                    if (normalizedGuess[i].ToString().ToLower() == normalizedSecretWord[i].ToString().ToLower())
-                    {
-                        _mtbList[_initialIndex1].BackColor = Color.Green;
-                    }
-                    else if (normalizedSecretWord.Contains(normalizedGuess[i].ToString().ToLower()))
-                    {
-                        _mtbList[_initialIndex1].BackColor = Color.Yellow;
-                    }
-                    else
-                    {
-                        _mtbList[_initialIndex1].BackColor = Color.Gray;
-                    }
-                    _initialIndex1++;
-                }
-
-                if (normalizedGuess.ToLower() == normalizedSecretWord.ToLower())
-                {
-                    MessageBox.Show("Parabéns, você acertou a palavra secreta!");
-                    ResetGame();
-                }
-                else if (_currentMaskedTextBoxIndex == _mtbList.Count - 1)
-                {
-                    TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
-                    MessageBox.Show($"Você errou! :(\n\n A palavra era: {_wordle.secretWord.FirstLetterToUpperCase()}.");
-                    ResetGame();
-                }
-                else
-                {
-                    _currentMaskedTextBoxIndex++;
-                    _mtbList[_currentMaskedTextBoxIndex].Focus();
-                }
-
-                EnableButtons();
-            }
-
-            else
-            {
-                MessageBox.Show("Palavra inválida!");
-
-                _initialIndex2 -= 5;
-
-                int NumberOfLetters = _wordle.guess.Length;
-
-                for (int i = NumberOfLetters - 1; i >= 0; i--)
-                {
-                    _currentAttempt--;
-                    _currentMaskedTextBoxIndex--;
-                }
-            }
-                
-        }
-
-        private string GetGuessFromMtbList()
-        {
-            string guess = "";
-
-            for (int i = _initialIndex2; i < _mtbList.Count; i++)
-            {
-                guess += _mtbList[i].Text;
-            }
-
-            _initialIndex2 += 5;
-
-            return guess;
-        }
-
-        private void ResetGame()
-        {
-            _wordle = new Wordle();
-            _currentMaskedTextBoxIndex = 0;
-            _currentAttempt = 1;
-            _initialIndex1 = 0;
-            _initialIndex2 = 0;
-
-            foreach (MaskedTextBox mtb in _mtbList)
-            {
-                mtb.Clear();
-                mtb.BackColor = Color.White;
-            }
-
-            _mtbList[_currentMaskedTextBoxIndex].Focus();
         }
     }
 }

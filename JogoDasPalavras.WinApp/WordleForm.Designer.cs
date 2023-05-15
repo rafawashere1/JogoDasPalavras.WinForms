@@ -92,6 +92,7 @@
             // 
             // btnBackSpace
             // 
+            btnBackSpace.FlatStyle = FlatStyle.Popup;
             btnBackSpace.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnBackSpace.Location = new Point(488, 3);
             btnBackSpace.Name = "btnBackSpace";
@@ -103,6 +104,7 @@
             // 
             // btnEnter
             // 
+            btnEnter.FlatStyle = FlatStyle.Popup;
             btnEnter.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnEnter.Location = new Point(3, 3);
             btnEnter.Name = "btnEnter";
@@ -113,6 +115,7 @@
             // 
             // btnM
             // 
+            btnM.FlatStyle = FlatStyle.Popup;
             btnM.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnM.Location = new Point(431, 3);
             btnM.Name = "btnM";
@@ -123,6 +126,7 @@
             // 
             // btnN
             // 
+            btnN.FlatStyle = FlatStyle.Popup;
             btnN.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnN.Location = new Point(374, 3);
             btnN.Name = "btnN";
@@ -133,6 +137,7 @@
             // 
             // btnB
             // 
+            btnB.FlatStyle = FlatStyle.Popup;
             btnB.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnB.Location = new Point(317, 3);
             btnB.Name = "btnB";
@@ -143,6 +148,7 @@
             // 
             // btnV
             // 
+            btnV.FlatStyle = FlatStyle.Popup;
             btnV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnV.Location = new Point(260, 3);
             btnV.Name = "btnV";
@@ -153,6 +159,7 @@
             // 
             // btnC
             // 
+            btnC.FlatStyle = FlatStyle.Popup;
             btnC.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnC.Location = new Point(203, 3);
             btnC.Name = "btnC";
@@ -163,6 +170,7 @@
             // 
             // btnX
             // 
+            btnX.FlatStyle = FlatStyle.Popup;
             btnX.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnX.Location = new Point(146, 3);
             btnX.Name = "btnX";
@@ -173,6 +181,7 @@
             // 
             // btnZ
             // 
+            btnZ.FlatStyle = FlatStyle.Popup;
             btnZ.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnZ.Location = new Point(89, 3);
             btnZ.Name = "btnZ";
@@ -183,6 +192,7 @@
             // 
             // btnL
             // 
+            btnL.FlatStyle = FlatStyle.Popup;
             btnL.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnL.Location = new Point(443, 3);
             btnL.Name = "btnL";
@@ -193,6 +203,7 @@
             // 
             // btnK
             // 
+            btnK.FlatStyle = FlatStyle.Popup;
             btnK.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnK.Location = new Point(388, 3);
             btnK.Name = "btnK";
@@ -203,6 +214,7 @@
             // 
             // btnJ
             // 
+            btnJ.FlatStyle = FlatStyle.Popup;
             btnJ.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnJ.Location = new Point(333, 3);
             btnJ.Name = "btnJ";
@@ -213,6 +225,7 @@
             // 
             // btnH
             // 
+            btnH.FlatStyle = FlatStyle.Popup;
             btnH.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnH.Location = new Point(278, 3);
             btnH.Name = "btnH";
@@ -223,6 +236,7 @@
             // 
             // btnG
             // 
+            btnG.FlatStyle = FlatStyle.Popup;
             btnG.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnG.Location = new Point(223, 3);
             btnG.Name = "btnG";
@@ -233,6 +247,7 @@
             // 
             // btnF
             // 
+            btnF.FlatStyle = FlatStyle.Popup;
             btnF.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnF.Location = new Point(168, 3);
             btnF.Name = "btnF";
@@ -243,6 +258,7 @@
             // 
             // btnD
             // 
+            btnD.FlatStyle = FlatStyle.Popup;
             btnD.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnD.Location = new Point(113, 3);
             btnD.Name = "btnD";
@@ -253,6 +269,7 @@
             // 
             // btnS
             // 
+            btnS.FlatStyle = FlatStyle.Popup;
             btnS.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnS.Location = new Point(58, 3);
             btnS.Name = "btnS";
@@ -263,6 +280,7 @@
             // 
             // btnA
             // 
+            btnA.FlatStyle = FlatStyle.Popup;
             btnA.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnA.Location = new Point(3, 3);
             btnA.Name = "btnA";
@@ -273,16 +291,21 @@
             // 
             // btnP
             // 
+            btnP.BackColor = Color.RosyBrown;
+            btnP.FlatAppearance.BorderColor = Color.IndianRed;
+            btnP.FlatAppearance.BorderSize = 0;
+            btnP.FlatStyle = FlatStyle.Popup;
             btnP.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnP.Location = new Point(507, 3);
             btnP.Name = "btnP";
             btnP.Size = new Size(51, 59);
             btnP.TabIndex = 9;
             btnP.Text = "P";
-            btnP.UseVisualStyleBackColor = true;
+            btnP.UseVisualStyleBackColor = false;
             // 
             // btnO
             // 
+            btnO.FlatStyle = FlatStyle.Popup;
             btnO.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnO.Location = new Point(451, 3);
             btnO.Name = "btnO";
@@ -293,6 +316,7 @@
             // 
             // btnI
             // 
+            btnI.FlatStyle = FlatStyle.Popup;
             btnI.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnI.Location = new Point(395, 3);
             btnI.Name = "btnI";
@@ -303,6 +327,7 @@
             // 
             // btnU
             // 
+            btnU.FlatStyle = FlatStyle.Popup;
             btnU.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnU.Location = new Point(339, 3);
             btnU.Name = "btnU";
@@ -313,6 +338,7 @@
             // 
             // btnY
             // 
+            btnY.FlatStyle = FlatStyle.Popup;
             btnY.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnY.Location = new Point(283, 3);
             btnY.Name = "btnY";
@@ -323,6 +349,7 @@
             // 
             // btnT
             // 
+            btnT.FlatStyle = FlatStyle.Popup;
             btnT.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnT.Location = new Point(227, 3);
             btnT.Name = "btnT";
@@ -333,6 +360,7 @@
             // 
             // btnR
             // 
+            btnR.FlatStyle = FlatStyle.Popup;
             btnR.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnR.Location = new Point(171, 3);
             btnR.Name = "btnR";
@@ -343,6 +371,7 @@
             // 
             // btnE
             // 
+            btnE.FlatStyle = FlatStyle.Popup;
             btnE.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnE.Location = new Point(115, 3);
             btnE.Name = "btnE";
@@ -353,6 +382,7 @@
             // 
             // btnW
             // 
+            btnW.FlatStyle = FlatStyle.Popup;
             btnW.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnW.Location = new Point(59, 3);
             btnW.Name = "btnW";
@@ -363,7 +393,8 @@
             // 
             // btnQ
             // 
-            btnQ.BackColor = Color.Transparent;
+            btnQ.BackColor = Color.RosyBrown;
+            btnQ.FlatStyle = FlatStyle.Popup;
             btnQ.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold, GraphicsUnit.Point);
             btnQ.Location = new Point(3, 3);
             btnQ.Name = "btnQ";
@@ -473,6 +504,7 @@
             // 
             // mtbFirstInputLineOne
             // 
+            mtbFirstInputLineOne.BackColor = Color.Gainsboro;
             mtbFirstInputLineOne.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFirstInputLineOne.HidePromptOnLeave = true;
             mtbFirstInputLineOne.Location = new Point(232, 137);
@@ -481,12 +513,13 @@
             mtbFirstInputLineOne.Name = "mtbFirstInputLineOne";
             mtbFirstInputLineOne.PromptChar = ' ';
             mtbFirstInputLineOne.Size = new Size(70, 72);
-            mtbFirstInputLineOne.TabIndex = 5;
+            mtbFirstInputLineOne.TabIndex = 0;
             mtbFirstInputLineOne.TextAlign = HorizontalAlignment.Center;
             mtbFirstInputLineOne.ValidatingType = typeof(char);
             // 
             // mtbFourthInputLineOne
             // 
+            mtbFourthInputLineOne.BackColor = Color.Gainsboro;
             mtbFourthInputLineOne.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFourthInputLineOne.HidePromptOnLeave = true;
             mtbFourthInputLineOne.Location = new Point(496, 137);
@@ -501,6 +534,7 @@
             // 
             // mtbFifthInputLineOne
             // 
+            mtbFifthInputLineOne.BackColor = Color.Gainsboro;
             mtbFifthInputLineOne.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFifthInputLineOne.HidePromptOnLeave = true;
             mtbFifthInputLineOne.Location = new Point(583, 137);
@@ -515,6 +549,7 @@
             // 
             // mtbFirstInputLineTwo
             // 
+            mtbFirstInputLineTwo.BackColor = Color.Gainsboro;
             mtbFirstInputLineTwo.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFirstInputLineTwo.HidePromptOnLeave = true;
             mtbFirstInputLineTwo.Location = new Point(232, 215);
@@ -529,6 +564,7 @@
             // 
             // mtbFirstInputLineThree
             // 
+            mtbFirstInputLineThree.BackColor = Color.Gainsboro;
             mtbFirstInputLineThree.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFirstInputLineThree.HidePromptOnLeave = true;
             mtbFirstInputLineThree.Location = new Point(232, 293);
@@ -543,6 +579,7 @@
             // 
             // mtbFirstInputLineFour
             // 
+            mtbFirstInputLineFour.BackColor = Color.Gainsboro;
             mtbFirstInputLineFour.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFirstInputLineFour.HidePromptOnLeave = true;
             mtbFirstInputLineFour.Location = new Point(232, 371);
@@ -557,6 +594,7 @@
             // 
             // mtbFirstInputLineFive
             // 
+            mtbFirstInputLineFive.BackColor = Color.Gainsboro;
             mtbFirstInputLineFive.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFirstInputLineFive.HidePromptOnLeave = true;
             mtbFirstInputLineFive.Location = new Point(232, 449);
@@ -571,6 +609,7 @@
             // 
             // mtbSecondInputLineTwo
             // 
+            mtbSecondInputLineTwo.BackColor = Color.Gainsboro;
             mtbSecondInputLineTwo.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbSecondInputLineTwo.HidePromptOnLeave = true;
             mtbSecondInputLineTwo.Location = new Point(318, 215);
@@ -585,6 +624,7 @@
             // 
             // mtbSecondInputLineThree
             // 
+            mtbSecondInputLineThree.BackColor = Color.Gainsboro;
             mtbSecondInputLineThree.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbSecondInputLineThree.HidePromptOnLeave = true;
             mtbSecondInputLineThree.Location = new Point(318, 293);
@@ -599,6 +639,7 @@
             // 
             // mtbSecondInputLineFour
             // 
+            mtbSecondInputLineFour.BackColor = Color.Gainsboro;
             mtbSecondInputLineFour.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbSecondInputLineFour.HidePromptOnLeave = true;
             mtbSecondInputLineFour.Location = new Point(317, 371);
@@ -613,6 +654,7 @@
             // 
             // mtbSecondInputLineFive
             // 
+            mtbSecondInputLineFive.BackColor = Color.Gainsboro;
             mtbSecondInputLineFive.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbSecondInputLineFive.HidePromptOnLeave = true;
             mtbSecondInputLineFive.Location = new Point(318, 449);
@@ -627,6 +669,7 @@
             // 
             // mtbThirdInputLineFive
             // 
+            mtbThirdInputLineFive.BackColor = Color.Gainsboro;
             mtbThirdInputLineFive.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbThirdInputLineFive.HidePromptOnLeave = true;
             mtbThirdInputLineFive.Location = new Point(407, 449);
@@ -641,6 +684,7 @@
             // 
             // mtbThirdInputLineFour
             // 
+            mtbThirdInputLineFour.BackColor = Color.Gainsboro;
             mtbThirdInputLineFour.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbThirdInputLineFour.HidePromptOnLeave = true;
             mtbThirdInputLineFour.Location = new Point(407, 371);
@@ -655,6 +699,7 @@
             // 
             // mtbThirdInputLineThree
             // 
+            mtbThirdInputLineThree.BackColor = Color.Gainsboro;
             mtbThirdInputLineThree.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbThirdInputLineThree.HidePromptOnLeave = true;
             mtbThirdInputLineThree.Location = new Point(407, 293);
@@ -669,6 +714,7 @@
             // 
             // mtbThirdInputLineTwo
             // 
+            mtbThirdInputLineTwo.BackColor = Color.Gainsboro;
             mtbThirdInputLineTwo.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbThirdInputLineTwo.HidePromptOnLeave = true;
             mtbThirdInputLineTwo.Location = new Point(407, 215);
@@ -683,6 +729,7 @@
             // 
             // mtbThirdInputLineOne
             // 
+            mtbThirdInputLineOne.BackColor = Color.Gainsboro;
             mtbThirdInputLineOne.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbThirdInputLineOne.HidePromptOnLeave = true;
             mtbThirdInputLineOne.Location = new Point(407, 137);
@@ -697,6 +744,7 @@
             // 
             // mtbSecondInputLineOne
             // 
+            mtbSecondInputLineOne.BackColor = Color.Gainsboro;
             mtbSecondInputLineOne.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbSecondInputLineOne.HidePromptOnLeave = true;
             mtbSecondInputLineOne.Location = new Point(317, 137);
@@ -711,6 +759,7 @@
             // 
             // mtbFourthInputLineThree
             // 
+            mtbFourthInputLineThree.BackColor = Color.Gainsboro;
             mtbFourthInputLineThree.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFourthInputLineThree.HidePromptOnLeave = true;
             mtbFourthInputLineThree.Location = new Point(496, 293);
@@ -725,6 +774,7 @@
             // 
             // mtbFourthInputLineFour
             // 
+            mtbFourthInputLineFour.BackColor = Color.Gainsboro;
             mtbFourthInputLineFour.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFourthInputLineFour.HidePromptOnLeave = true;
             mtbFourthInputLineFour.Location = new Point(496, 371);
@@ -739,6 +789,7 @@
             // 
             // mtbFourthInputLineFive
             // 
+            mtbFourthInputLineFive.BackColor = Color.Gainsboro;
             mtbFourthInputLineFive.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFourthInputLineFive.HidePromptOnLeave = true;
             mtbFourthInputLineFive.Location = new Point(496, 449);
@@ -753,6 +804,7 @@
             // 
             // mtbFourthInputLineTwo
             // 
+            mtbFourthInputLineTwo.BackColor = Color.Gainsboro;
             mtbFourthInputLineTwo.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFourthInputLineTwo.HidePromptOnLeave = true;
             mtbFourthInputLineTwo.Location = new Point(496, 215);
@@ -767,6 +819,7 @@
             // 
             // mtbFifthInputLineTwo
             // 
+            mtbFifthInputLineTwo.BackColor = Color.Gainsboro;
             mtbFifthInputLineTwo.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFifthInputLineTwo.HidePromptOnLeave = true;
             mtbFifthInputLineTwo.Location = new Point(583, 215);
@@ -781,6 +834,7 @@
             // 
             // mtbFifthInputLineThree
             // 
+            mtbFifthInputLineThree.BackColor = Color.Gainsboro;
             mtbFifthInputLineThree.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFifthInputLineThree.HidePromptOnLeave = true;
             mtbFifthInputLineThree.Location = new Point(583, 293);
@@ -795,6 +849,7 @@
             // 
             // mtbFifthInputLineFour
             // 
+            mtbFifthInputLineFour.BackColor = Color.Gainsboro;
             mtbFifthInputLineFour.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFifthInputLineFour.HidePromptOnLeave = true;
             mtbFifthInputLineFour.Location = new Point(583, 371);
@@ -809,6 +864,7 @@
             // 
             // mtbFifthInputLineFive
             // 
+            mtbFifthInputLineFive.BackColor = Color.Gainsboro;
             mtbFifthInputLineFive.Font = new Font("MV Boli", 30F, FontStyle.Bold, GraphicsUnit.Point);
             mtbFifthInputLineFive.HidePromptOnLeave = true;
             mtbFifthInputLineFive.Location = new Point(583, 449);
@@ -825,7 +881,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = Color.RosyBrown;
             ClientSize = new Size(914, 833);
             Controls.Add(mtbFifthInputLineFive);
             Controls.Add(mtbFifthInputLineFour);
