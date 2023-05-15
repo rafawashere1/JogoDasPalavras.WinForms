@@ -96,7 +96,9 @@ namespace JogoDasPalavras.WinApp
 
         private void ClearLastInput(object sender, EventArgs e)
         {
-            for (int i = _mtbList.Count - 1; i >= 0; i--)
+            int j = _mtbList.Count - 1;
+
+            for (int i = j; i >= 0; i--)
             {
                 if (!string.IsNullOrWhiteSpace(_mtbList[i].Text))
                 {
@@ -167,12 +169,16 @@ namespace JogoDasPalavras.WinApp
 
                 _initialIndex2 -= 5;
 
-                int NumberOfLetters = _wordle.guess.Length;
+                int NumberOfLetters = _wordle.guess.Length - 1;
+                int j = _currentMaskedTextBoxIndex - 1;
 
-                for (int i = NumberOfLetters - 1; i >= 0; i--)
+                for (int i = NumberOfLetters; i >= 0; i--)
                 {
+                    _mtbList[j].Clear();
                     _currentAttempt--;
                     _currentMaskedTextBoxIndex--;
+
+                    j--;
                 }
             }
 
